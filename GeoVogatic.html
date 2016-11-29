@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="ol.css" type="text/css">
+		<link rel="stylesheet" href="GeoVogatic.css" type="text/css">
+		<script src="ol.js" type="text/javascript"></script>
+		<script src="jquery-3.1.1.min.js"></script>
+		<title>OpenLayers 3</title>
+		
+	</head>
+	
+	<body>
+		<table> 
+			<tr>
+				<td><img src="logo.png" height="80" width="80"></td>
+				<td><h1>GeoVogatic</h1></td>
+			</tr>
+		</table>	
+		<div id="map" class="map"></div>
+		
+		<div class="dropdown">
+		 
+			<div id="myPolygon" class="dropdown-content">
+			<h2>Polygon</h2>
+			<ul>
+			<li>
+				Pattern: <div id="select"></div>
+				<div id="pselect"></div>
+			</li>
+			<li>
+				<label>Color: </label>
+				<select  onchange="refresh()">
+					<option value="rgba(255,255,255,0.3)">white</option>
+					<option value="rgba(0,0,0,0)">transparent</option>
+					<option value="rgba(0,0,255,0.3)">blue</option>
+					<option value="rgba(255,0,0,0.3)">red</option>
+					<option value="rgba(0,255,0,0.5)">green</option>
+					<option value="rgba(255,255,0,0.5)">yellow</option>
+				</select>
+			</li>
+			<li>
+				<label>Outline Color: </label>
+				<select onchange="refresh()">
+					<option value="rgba(255,255,255,0.3)">white</option>
+					<option value="rgba(0,0,0,0)">transparent</option>
+					<option value="rgba(0,0,255,0.3)">blue</option>
+					<option value="rgba(255,0,0,0.3)">red</option>
+					<option value="rgba(0,255,0,0.5)">green</option>
+					<option value="rgba(255,255,0,0.5)">yellow</option>
+				</select>
+			</li>
+			<li style="clear:both;">
+				<label>Outline Thickness:</label>
+				<input id="size" type="number" min=0 value=5 onchange="refresh()" />
+			</li>
+			
+			<li>
+				<label>Transparency: </label>
+				<input type="range" min="00" max="100" step="1" value="0" id="myrange_point">
+			</li>
+			
+		
+			
+		</ul>
+			</div>
+			
+			
+			<div id="myPoint" class="dropdown-content">
+			<h2>Point</h2>
+			<ul>
+			<li>
+				symbol: <div id="select"></div>
+				<div id="pselect"></div>
+			</li>
+			<li>
+				<label>Color: </label>
+				<select onchange="refresh()">
+					<option value="rgba(255,255,255,0.3)">white</option>
+					<option value="rgba(0,0,255,0.3)">blue</option>
+					<option value="rgba(255,0,0,0.3)">red</option>
+					<option value="rgba(0,255,0,0.5)">green</option>
+					<option value="rgba(255,255,0,0.5)">yellow</option>
+				</select>
+			</li>
+			<li>
+				<label>size: </label>
+				<select onchange="refresh()">
+					<option value="0">0</option>
+					<option value="1" selected>1</option>
+					<option value="1.5">1.5</option>
+					<option value="2">2</option>
+					<option value="2.5">2.5</option>
+					<option value="3">3</option>
+					<option value="3.5">3.5</option>
+					<option value="4">4</option>
+					<option value="4.5">4.5</option>
+					<option value="5">5</option>
+				</select>
+			</li>
+			
+			
+			<li>
+				<label>Transparency: </label>
+				<input type="range" min="00" max="100" step="1" value="0" id="myrange_point">
+			</li>
+			
+		
+			
+		</ul>
+			</div>
+		
+			<div id="myLine" class="dropdown-content">
+			<h2>Line</h2>
+			<ul>
+				<li>
+					symbol: <div id="select"></div>
+					<div id="pselect"></div>
+				</li>
+				<li>
+					<label>Color: </label>
+					<select onchange="refresh()">
+						<option value="rgba(255,255,255,0.3)">white</option>
+						<option value="rgba(0,0,255,0.3)">blue</option>
+						<option value="rgba(255,0,0,0.3)">red</option>
+						<option value="rgba(0,255,0,0.5)">green</option>
+						<option value="rgba(255,255,0,0.5)">yellow</option>
+					</select>
+				</li>
+				<li>
+					<label>Thickness: </label>
+					<select onchange="refresh()">
+						<option value="0">0</option>
+						<option value="1" selected>1</option>
+						<option value="1.5">1.5</option>
+						<option value="2">2</option>
+						<option value="2.5">2.5</option>
+						<option value="3">3</option>
+						<option value="3.5">3.5</option>
+						<option value="4">4</option>
+						<option value="4.5">4.5</option>
+						<option value="5">5</option>
+					</select>
+				</li>
+				
+				
+				<li>
+					<label>Transparency: </label>
+					<input type="range" min="00" max="100" step="1" value="0" id="myrange_point">
+				</li>
+			</ul>
+				</div>
+			
+		</div>
+
+		<script src="GeoVogatic.js" type="text/javascript"></script>
+	</body>	
+</html>
